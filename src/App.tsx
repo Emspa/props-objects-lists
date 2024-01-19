@@ -1,23 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Movie } from './components/Movie'
-import { Movies } from './models/Movies'
+/** @format */
+import "./App.css";
+import { Movie } from "./components/Movie";
+import { Movies } from "./components/Movies";
+import { MyMovies } from "./models/MyMovies";
 
 function App() {
+  const movies: MyMovies[] = [
+    new MyMovies("Hungergames", 160, "action/ adventure"),
+    new MyMovies("Taken", 120, "action/ drama"),
+    new MyMovies("White chicks", 140, "comedy"),
+  ];
 
-  const moviea = new Movies ("Hungergames", 160, "action/ adventure")
-  const movieb = new Movies ("Hungergames", 160, "action/ adventure")
-  const moviec = new Movies ("Hungergames", 160, "action/ adventure")
+
+return (
+  <div className="App">
+    <Movies myMovies={movies}/>
 
 
-  return (
-    <div className="App">
-      <Movie movies={moviea}/> 
-   
-    </div>
-  )
+  </div>
+);
+
 }
 
-export default App
+export default App;

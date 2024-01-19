@@ -1,7 +1,7 @@
-import { Movies } from "../models/Movies"
+import { MyMovies } from "../models/MyMovies"
 
 interface IMovieProps {
-    movies: Movies;
+    movies: MyMovies;
 }
 export const Movie = (props: IMovieProps) => {
     return(
